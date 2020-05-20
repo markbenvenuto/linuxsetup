@@ -1,0 +1,1 @@
+python3 buildscripts/scons.py CCFLAGS="-Wa,--compress-debug-sections -fstandalone-debug" LINKFLAGS="-fuse-ld=lld" --dbg=on  --ssl CC=clang CXX=clang++ VARIANT_DIR=clang_asan MONGO_VERSION=0.0.0 MONGO_GIT_HASH=unknown --allocator=system --sanitize=address linux-clang-asan-local.ninja

@@ -1,0 +1,1 @@
+python3 buildscripts/scons.py CCFLAGS="-Wa,--compress-debug-sections -gsplit-dwarf" LINKFLAGS="-fuse-ld=lld" --dbg=on --ssl CC=clang CXX=clang++ VARIANT_DIR=ice_dyn_hyg_clang --install-mode=hygienic --icecream MONGO_VERSION=0.0.0 MONGO_GIT_HASH=unknown --ssl --link-model=dynamic --allocator=system linux-clang-dynamic-hygienic-local.ninja

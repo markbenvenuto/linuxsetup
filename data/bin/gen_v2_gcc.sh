@@ -1,0 +1,2 @@
+#/usr/bin/python2 buildscripts/scons.py CCFLAGS="-Wa,--compress-debug-sections -gsplit-dwarf" --dbg=on --ssl CC=/opt/mongodbtoolchain/v2/bin/gcc CXX=/opt/mongodbtoolchain/v2/bin/g++ VARIANT_DIR=ice_gcc2 --icecream --modules=ninja MONGO_VERSION=0.0.0 MONGO_GIT_HASH=unknown linux-gcc-v2-toolchain.ninja
+/usr/bin/python2 buildscripts/scons.py --dbg=on --ssl CC=/opt/mongodbtoolchain/v2/bin/gcc CXX=/opt/mongodbtoolchain/v2/bin/g++ VARIANT_DIR=ice_gcc2 --icecream --modules=ninja MONGO_VERSION=0.0.0 MONGO_GIT_HASH=unknown linux-gcc-v2-toolchain.ninja

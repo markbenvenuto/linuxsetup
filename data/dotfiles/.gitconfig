@@ -1,0 +1,43 @@
+[user]
+	email = mark.benvenuto@mongodb.com
+	name = Mark Benvenuto
+[color]
+	status = auto
+	diff = auto
+[push]
+	default = simple
+[push]
+    ; when you 'git push', if no branch is specified, just push the
+    ; currently checked out branch.
+    default = current
+[alias]
+    ci = commit
+    co = checkout
+    st = status
+    br = branch
+    ;lb = log --pretty=format:\"%h - %an, %s\" -n 10 
+    updiff = diff --stat --cached origin/master
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    logp = log -n 1 --stat -u
+    fp = format-patch
+    bv = branch -v
+    bl = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+    br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+    r10 = rebase -i HEAD~10
+    r20 = rebase -i HEAD~20
+    rbc = rebase --continue
+    caa = commit -a --amend
+    fo = fetch origin
+    logb = log --author=mark origin/master --format='%h %an %cs: %s' -n 10
+[merge]
+    ff = only
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[core]
+    ; pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+[interactive]
+    diffFilter = delta --color-only
+[diff]
+    algorithm=histogram

@@ -1,0 +1,1 @@
+curl -L --output $HOME/bin/evergreen https://evergreen.mongodb.com/clients/linux_amd64/evergreen
