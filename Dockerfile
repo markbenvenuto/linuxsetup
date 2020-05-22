@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y python curl sudo git
+RUN apt-get update && apt-get install -y python curl sudo git zsh
 
 COPY . /root/linuxsetup
 
