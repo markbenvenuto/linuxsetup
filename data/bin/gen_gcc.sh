@@ -1,0 +1,2 @@
+#scons CCFLAGS="-Wa,--compress-debug-sections -gsplit-dwarf" --ssl CC=/opt/mongodbtoolchain/v2/bin/gcc CXX=/opt/mongodbtoolchain/v2/bin/g++ VARIANT_DIR=ice_gcc --icecream MONGO_VERSION=0.0.0 MONGO_GIT_HASH=unknown linux-gcc-toolchain.ninja
+python3 buildscripts/scons.py CCFLAGS="-Wa,--compress-debug-sections -gsplit-dwarf" --dbg=on --ssl CC=/opt/mongodbtoolchain/v3/bin/gcc CXX=/opt/mongodbtoolchain/v3/bin/g++ VARIANT_DIR=ice_gcc --icecream MONGO_VERSION=0.0.0 MONGO_GIT_HASH=unknown --enable-free-mon=off linux-gcc-toolchain.ninja
